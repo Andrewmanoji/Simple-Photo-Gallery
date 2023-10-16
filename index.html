@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VisualVault</title>
+
+    <link rel="icon" href="./assets/crown-solid.svg" type="image/x-icon" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <div class="nav">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#"
+              ><img src="./assets/crown-solid.svg" class="imglogo" />
+              Visual Vault</a
+            >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">4k HD Images</a>
+              </li>
+             
+            </ul>
+            <form class="search d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search an image "
+                aria-label="Search"
+              />
+              <button type="button" class="btn btn-primary">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
+              </button>
+
+              <!-- <span><i class="bi bi-search"></i></span>  -->
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Carousel  -->
+    <div id="carouselExampleDark" class="carousel carousel-light slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleLight"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleLight"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleLight"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="./assets/bg1.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h1 style="color: aliceblue; font-weight: 600">
+              Pictures Worth a Thousand Words
+            </h1>
+            <p style="color: antiquewhite; font-weight: 500; font-size: larger">
+              Immerse Yourself in a Tapestry of Visuals, Where Every Image Speaks
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="./assets/bg2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block ">
+            <h1 style="color: aliceblue; font-weight: 600">
+              Unveiling the World in Frames
+            </h1>
+            <p style="color: antiquewhite; font-weight: 500; font-size: larger">
+              Capturing the Essence of Life, Framing the Beauty of Every Day
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/bg4.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Productss -->
+   <section id="collection" class="py-5">
+    <div class="container ">
+
+    
+      <h1 class="text-center">Journey Beyond Boundaries, Where Images Reveal Uncharted Realms.</h1>
+      <!-- buttons  -->
+      <div class="container1 row">
+        <div class="filter-button-group d-flex flex-wrap justify-content-center mt-5 ">
+          <button type ="button" class="btn btn-primary btn-rounded m-2  active-filter-btn" data-filter="*" >All</button>
+          <button type ="button" class="btn btn-primary btn-rounded m-2" data-filter=".camera" >Camera</button>
+          <button type ="button" class="btn btn-primary btn-rounded m-2" data-filter=".hp" >Headphone</button>
+          <button type ="button" class="btn btn-primary btn-rounded m-2" data-filter=".mobile" >Mobile</button>
+          <button type ="button" class="btn btn-primary btn-rounded m-2" data-filter=".shoe" >Shoe</button>
+          <button type ="button" class="btn btn-primary btn-rounded m-2" data-filter=".watch" >Watch</button>
+
+
+
+
+
+        </div>
+      </div>
+
+      <!-- <ul class="menu">
+        <li class="button active" id="all"><a href="#">All</a></li>
+        <li class="button " id="Half"><a href="#">Half Sleeve</a></li>
+        <li class="button " id="Full"><a href="#">Full Sleeve</a></li>
+        <li class="button " id="Shorts"><a href="#">Shorts</a></li>
+
+
+
+      </ul> -->
+
+      <!-- cards -->
+      <div class="row row-cols-1 row-cols-md-4 g-4 py-5 " id="list">
+      
+        <div class="col camera">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/camera1.jpg" alt="Card image cap">
+            
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col camera">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/camera2.jpg" alt="Card image cap">
+            
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col hp">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/headphone1.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col camera">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/camera3.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col hp">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/headphone2.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col mobile">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/mobile1.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col mobile">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/mobile2.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+         <div class="col hp">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/headphone3.jpg" alt="Card image cap">
+         
+        </div>
+        </div>
+
+        <div class="col shoe">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/shoe1.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col mobile">
+            <div class="card">
+            <img class="card-img-top" src="./assets/gallery/mobile3.jpg" alt="Card image cap">
+            
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col  shoe">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/shoe2.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col mobile">
+            <div class="card" ">
+            <img class="card-img-top" src="./assets/gallery/mobile4.jpg" alt="Card image cap">
+            
+            </div>
+
+            
+            
+      </div>
+
+       <div class="col  shoe">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/shoe3.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col  watch">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/watch1.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+        
+         <div class="col  shoe">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/shoe4.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+         <div class="col  watch">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/watch2.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col  watch">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/watch3.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col  watch">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/watch4.jpg" alt="Card image cap">
+           
+            </div>
+
+            
+            
+        </div>
+
+        <div class="col mobile">
+            <div class="card" ">
+            <img class="card-img-top" src="./assets/gallery/mobile5.jpg" alt="Card image cap">
+            
+            </div>
+
+            
+            
+      </div>
+
+       <div class="col hp">
+            <div class="card" >
+            <img class="card-img-top" src="./assets/gallery/headphone4.jpg" alt="Card image cap">
+         
+        </div>
+        </div>
+
+
+
+       
+
+        
+
+      
+    </div>
+
+</section>
+
+    <!-- bootstrap script cdn -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jquery cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- isotope button filter -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+    <script>
+      var $grid = $("#list").isotope({
+        // options
+      });
+      // filter items on button click
+      $(".filter-button-group").on("click", "button", function () {
+        var filterValue = $(this).attr("data-filter");
+        $grid.isotope({ filter: filterValue });
+      });
+
+      //add active button
+
+      $(".active-filter-btn").on("click", "button", function () {
+        $this.addClass("active").siblings().removeClass("active");
+      });
+    </script>
+  </body>
+</html>
